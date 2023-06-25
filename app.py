@@ -30,7 +30,7 @@ def line():
 @app.route('/data')
 def get_data():
     # Load the data from a CSV file or any other source
-    data = pd.read_csv(r"C:\Users\jjame\Downloads\city.csv")
+    data = pd.read_csv(r"static\city.csv")
     # Perform any necessary data preprocessing
     state_populations = data.groupby('State')['Population'].sum().reset_index()
     state_populations = state_populations[state_populations['Population'] > 2500000]
